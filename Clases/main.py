@@ -2,7 +2,7 @@ print('\n\nMenu de comidas')
 
 from flask import Flask, jsonify, request
 
-from mod.persona import Persona
+from mod.Usuario import Persona
 
 app = Flask(__name__)
 
@@ -92,7 +92,7 @@ def menuPutUpdatePorBody():
 
     for indice, p in enumerate(menues):
         if p['Nombre'] == nombre:
-            p['descripcion'] = descripcion:
+            p['descripcion'] = descripcion
             p['precio'] = precio
     return jsonify({'menues': menues, 'estado': 'ok'})
 
