@@ -9,11 +9,11 @@ def elegir_metodo_pago():
     return metodo_pago
 
 def comprar():
-   
+    personas = []
     for persona in personas:
-        print(f"{persona.nombre}")
-        print(f"Menú elegido: {menus[persona.menu_elegido-1]}")
-        print(f"Hora de entrega: {persona.hora_elegida}")
-        metodo_pago = elegir_metodo_pago()
-        print(f"Método de pago: {metodo_pago}")
-        print()
+            print(f"{persona.nombre}")
+            print(f"Menú elegido: {menus[persona.menu_elegido-1]}")
+            print(f"Hora de entrega: {persona.hora_elegida}")
+            metodo_pago = elegir_metodo_pago()
+            print(f"Método de pago: {metodo_pago}")
+    print()
