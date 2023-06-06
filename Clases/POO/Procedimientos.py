@@ -2,7 +2,7 @@ print('\n\nMenu de comidas')
 
 from flask import Flask, jsonify, request
 
-from mod.persona import Persona
+from mod.Usuario import Persona
 
 app = Flask(__name__)
 
