@@ -22,16 +22,16 @@ conexion = sqlite3.connect('base de datos/MenuesBBDD.db')
 cursor = conexion.cursor()
 
 
-sentenciaSQL  = "INSERT INTO articulos "
-sentenciaSQL += "VALUES ('Termometro', 1050)"
+sentenciaSQL  = "INSERT INTO menues "
+sentenciaSQL += "VALUES ('Pizza de Mozzarella', salsa de tomate y queso mozzarella)"
 cursor.execute(sentenciaSQL)
 
-sentenciaSQL  = "INSERT INTO articulos "
-sentenciaSQL += "VALUES ('Ibuprofeno', 50)"
+sentenciaSQL  = "INSERT INTO menues "
+sentenciaSQL += "VALUES ('Pizza de Jamon y Morrones', salsa de tomate, jamon y morrones)"
 cursor.execute(sentenciaSQL)
 
-sentenciaSQL  = "INSERT INTO articulos "
-sentenciaSQL += "VALUES ('Paracetamol', 450)"
+sentenciaSQL  = "INSERT INTO menues "
+sentenciaSQL += "VALUES ('Pizza de Fugazzeta', Cebolla, queso mozzarella y aceitunas)"
 cursor.execute(sentenciaSQL)
 
 cursor.execute(sentenciaSQL)
@@ -46,14 +46,14 @@ conexion = sqlite3.connect('base de datos/MenuesBBDD.db')
 
 cursor = conexion.cursor()
 
-articulos = [
+menues = [
     ('Curitas', 2000),
     ('Vendas',  1400),
     ('Alcohol',  300)
 ]
 
-sentenciaSQL = "INSERT INTO articulos VALUES (?, ?)"
-cursor.executemany(sentenciaSQL, articulos)
+sentenciaSQL = "INSERT INTO menues VALUES (?, ?)"
+cursor.executemany(sentenciaSQL, menues)
 
 conexion.commit()
 conexion.close()
