@@ -23,15 +23,15 @@ cursor = conexion.cursor()
 
 
 sentenciaSQL  = "INSERT INTO menues "
-sentenciaSQL += "VALUES ('Pizza de Mozzarella', salsa de tomate y queso mozzarella)"
+sentenciaSQL += "VALUES ('Pizza de Mozzarella', 'salsa de tomate y queso mozzarella', 3200)"
 cursor.execute(sentenciaSQL)
 
 sentenciaSQL  = "INSERT INTO menues "
-sentenciaSQL += "VALUES ('Pizza de Jamon y Morrones', salsa de tomate, jamon y morrones)"
+sentenciaSQL += "VALUES ('Pizza de Jamon y Morrones', 'salsa de tomate, jamon y morrones', 3500)"
 cursor.execute(sentenciaSQL)
 
 sentenciaSQL  = "INSERT INTO menues "
-sentenciaSQL += "VALUES ('Pizza de Fugazzeta', Cebolla, queso mozzarella y aceitunas)"
+sentenciaSQL += "VALUES ('Pizza de Fugazzeta', 'Cebolla, queso mozzarella y aceitunas', 3500)"
 cursor.execute(sentenciaSQL)
 
 cursor.execute(sentenciaSQL)
@@ -47,9 +47,9 @@ conexion = sqlite3.connect('base de datos/MenuesBBDD.db')
 cursor = conexion.cursor()
 
 menues = [
-    ('Pizza Napolitana', salsa de tomate, queso mozzarella, rodajas de tomates y aceitunas),
-    ('Empanada de Carne',  Relleno de Carne Picada, Cebolla y Aceitunas),
-    ('Empanada de Pollo ',  Relleno de Pollo Desmenuzado, Cebolla y Queso Mozzarella)
+    ('Pizza Napolitana', 'salsa de tomate, queso mozzarella, rodajas de tomates y aceitunas', 3200),
+    ('Empanada de Carne',  'Relleno de Carne Picada, Cebolla y Aceitunas', 300),
+    ('Empanada de Pollo ',  'Relleno de Pollo Desmenuzado, Cebolla y Queso Mozzarella', 300)
 ]
 
 sentenciaSQL = "INSERT INTO menues VALUES (?, ?)"
