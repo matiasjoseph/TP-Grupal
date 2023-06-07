@@ -47,9 +47,9 @@ conexion = sqlite3.connect('base de datos/MenuesBBDD.db')
 cursor = conexion.cursor()
 
 menues = [
-    ('Curitas', 2000),
-    ('Vendas',  1400),
-    ('Alcohol',  300)
+    ('Pizza Napolitana', salsa de tomate, queso mozzarella, rodajas de tomates y aceitunas),
+    ('Empanada de Carne',  Relleno de Carne Picada, Cebolla y Aceitunas),
+    ('Empanada de Pollo ',  Relleno de Pollo Desmenuzado, Cebolla y Queso Mozzarella)
 ]
 
 sentenciaSQL = "INSERT INTO menues VALUES (?, ?)"
