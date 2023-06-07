@@ -1,0 +1,33 @@
+import sqlite3
+
+conexion = sqlite3.connect('base de datos/BaseDeDatos.db')
+conexion.close()
+
+import sqlite3
+
+conexion = sqlite3.connect('base de datos/AprendoBBDD.db')
+
+cursor = conexion.cursor()
+
+sentenciaSQL = 'CREATE TABLE menus'
+sentenciaSQL = sentenciaSQL + '(nombre VARCHAR(100),'
+sentenciaSQL = sentenciaSQL + ' stock integer)'
+
+cursor.execute(sentenciaSQL)
+
+conexion = sqlite3.connect('base de datos/AprendiendoBBDD.db')
+conexion.close()
+
+import sqlite3
+
+conexion = sqlite3.connect('base de datos/AprendoBBDD.db')
+
+cursor = conexion.cursor()
+
+sentenciaSQL = "INSERT INTO menus "
+sentenciaSQL = sentenciaSQL + "VALUES ('Tensiometro', 5)"
+
+cursor.execute(sentenciaSQL)
+
+conexion.commit()
+conexion.close()
