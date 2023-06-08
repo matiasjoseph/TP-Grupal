@@ -1,8 +1,9 @@
+
 print('\n\nMenu de comidas')
 
 from flask import Flask, jsonify, request
 
-from mod.Usuario import Persona
+from POO.Usuario import Persona
 
 app = Flask(__name__)
 
@@ -109,4 +110,4 @@ def menuDelete(nombre):
 if __name__ == '__main__':
     app.run(debug=True, port=5000)
 
---!
+

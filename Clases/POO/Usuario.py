@@ -14,15 +14,12 @@ class Persona:
     
     def ingresar(self):
         print(f"{self.mail} ha ingresado correctamente!")
-        print(f"\n ¡Bienvenido/a {self.nombre}, " ", {self.apellido}"
+        print(f"\n ¡Bienvenido/a {self.nombre}, " ", {self.apellido}")
               
     def comprar(self):
         personas = []
-            menu_elegido = int(input("Seleccione el numero del menú que desea: "))
-            hora_elegida = int(input("Seleccione la hora en la que desea recibir el menú: "))
-            persona.menu_elegido = menu_elegido
-            persona.hora_elegida = hora_elegida
-     comprar()
-              
-              
-         
+        menu_elegido = int(input("Seleccione el numero del menú que desea: "))
+        hora_elegida = int(input("Seleccione la hora en la que desea recibir el menú: "))
+        persona.menu_elegido = menu_elegido
+        persona.hora_elegida = hora_elegida
+
