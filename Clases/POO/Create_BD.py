@@ -15,7 +15,7 @@ sentenciaSQL = sentenciaSQL + ' menues integer)'
 
 cursor.execute(sentenciaSQL)
 
-conexion = sqlite3.connect('base de datos/creo_Base.db')
+conexion = sqlite3.connect('base de datos/crear_Base.db')
 conexion.close()
 
 
