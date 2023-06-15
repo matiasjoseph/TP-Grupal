@@ -2,8 +2,10 @@
 print('\n\nMenu de comidas')
 
 from flask import Flask, jsonify, request
-
+import POO.menu_controller
+from POO.db_menues import create_tables
 from POO.Usuario import Persona
+from  POO.Api_de_Terceros import get_xr
 
 app = Flask(__name__)
 
