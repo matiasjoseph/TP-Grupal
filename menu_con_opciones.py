@@ -1,5 +1,4 @@
 from crear_tabla import get_db
-from Usuario import Persona
 
 
 def bienvenida():
