@@ -21,3 +21,14 @@ def create_tables():
     cursor = db.cursor()
     for table in tables:
         cursor.execute(table)
+
+def seed_comidas():
+    queries = ["INSERT OR IGNORE INTO menues (menu_code, Nombre, descripcion, precio) VALUES (1, 'Pizza de Muzzarella', 'Salsa de tomate y queso Muzarella', 3200)",
+               "INSERT OR IGNORE INTO menues (menu_code, Nombre, price, descripcion, precio) VALUES (2, 'Pizza de Jamon y Morrones', 'Salsa de tomate, jamón y morrones', 3500)",
+               "INSERT OR IGNORE INTO menues (menu_code, name, price, amount, category) VALUES (3, 'Pizza de Fugazzeta', 'Cebolla, Queso Muzzarella y Aceitunas', 3500)",
+               ]
+    db = get_db()
+    cursor = db.cursor()
+    for query in queries:
+        cursor.execute(query)
+    db.commit()

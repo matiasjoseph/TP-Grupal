@@ -3,7 +3,7 @@ print('\n\nMenu de comidas')
 
 from flask import Flask, jsonify, request
 import POO.menu_controller
-from POO.crear_tabla import create_tables
+from POO.crear_tabla import create_tables, seed_comidas
 from POO.Usuario import Persona
 from  POO.Api_de_Terceros import get_xr
 
@@ -107,9 +107,13 @@ def menuDelete(nombre):
             menu[indice: indice+1] = []
     return jsonify({'menues': menues, 'estado': 'ok'})
 
+create_tables()
+seed_comidas()
 
 
 if __name__ == '__main__':
     app.run(debug=True, port=5000)
+
+
 
 
