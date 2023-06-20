@@ -2,6 +2,23 @@ from crear_tabla import get_db
 from Usuario import Persona
 
 
+def bienvenida():
+    print('\t\t @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@')
+    print('\t\t @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@')
+    print('\t\t @@    La Rotiseria      @@')
+    print('\t\t @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@')
+    print('\t\t @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@')
+
+def menu():
+    print('\n\t ----[MENU]---------')
+    print('\t 1) Agregar al menu')
+    print('\t 2) Actualizar menu')
+    print('\t 3) Borrar menu')
+    print('\t 4) Consultar un menu')
+    print('\t 5) Consultar todos los menues')
+    print('\t 6) Salir')
+
+
 def insert_menu(menu_code, Nombre, descripcion, precio):
     db = get_db()
     cursor = db.cursor()
@@ -61,6 +78,27 @@ def get_menues():
         list_of_menues.append(menu_to_add)
     return list_of_menues
 
+def salir():
+    print('Gracias por utilizar nuestro servicios')
 
+bienvenida()
 
-
+while True:
+    try:
+        menu()
+        opcion = int(input("Ingrese una Opcion: "))
+        if opcion==1:
+            insert_menu()
+        elif opcion==2:
+            update_menu()
+        elif opcion==3:
+            delete_menu()
+        elif opcion==4:
+            get_by_id()
+        elif opcion==5:
+            get_menues()
+        elif opcion==6:
+            salir()
+            break
+    except:
+        print('Excepcion! opciones validas son (1 hasta 5 y 6 para Salir)')
