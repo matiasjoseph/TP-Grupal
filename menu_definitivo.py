@@ -53,7 +53,7 @@ def inicio_empleado(nom, psw):
 def eliminar_de_carta(comida):
     for i in stock:
         if i.nombre == comida:
-            stock.remove(i)
+            cocina.remove(i)
 
 
 def pagar():
