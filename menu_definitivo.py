@@ -13,20 +13,20 @@ class Empleado:
         self.clave = cosa
 
 class Comida:
-    def __init__(self, Nombre, descripcion, precio):
+    def __init__(self, nombre, descripcion, precio):
         self.precio = precio
         self.nombre = nombre
         self.descripcion = descripcion
 
     def generar_dic(self):
-        return {'Nombre': self.nombre, 'descripcion': self.descripcion, 'precio': self.precio}
+        return {'nombre': self.nombre, 'descripcion': self.descripcion, 'precio': self.precio}
 
     def cambiar_informacion(self, dato, cant):
         if dato == 'precio':
             self.precio = cant
 
     def __str__(self):
-        return f'Nombre: {self.nombre}\ndescripcion: {self.descripcion} \nPrecio: {self.precio} pesos'
+        return f'nombre: {self.nombre}\ndescripcion: {self.descripcion} \nprecio: {self.precio} pesos'
 
     def informacion(self):
         return print(self)
@@ -45,7 +45,7 @@ def agregar_a_carta(pro, cant):
             a.cantidad -= cant
 
 
-def agregar_empleado(nom, psw):
+def inicio_empleado(nom, psw):
     laburante = Empleado(nom, psw)
     empleados.append(laburante)
 
@@ -87,9 +87,11 @@ cocina = []
 
 empleados = []
 
+Flag = True
 
-while True:
-    agregar_empleado('gerente', '1234')
+
+while Flag:
+    inicio_empleado('gerente', '1234')
     stock = []
     print('\nBienvenido a la Rotiseria')
 
@@ -102,7 +104,7 @@ while True:
 
         for empleado in empleados:
             if empleado.nombre == usr and empleado.clave == pasw:
-                while True:
+                while Flag:
                     print('\nQue accion desea realizar')
                     print('1) Revisar stock')
                     print('2) Agregar a la carta')
@@ -131,13 +133,13 @@ while True:
                         pagar()
                     elif num == 6:
                         salir()
-                        break
+                        Flag = False
                     else:
                         break
-                except:
-                    print("\nDebe ingresar numeros, no letras")
+                except Exception as e:
+                    print('Debe ingresar numeros, no letras', e)
             else:
                 print('Usuario o clave no validos. Ingrese de nuevo')
 
-    except:
-        print("\nDebe ingresar numeros, no letras")
+    except Exception as e:
+        print('Debe ingresar numeros, no letras', e)
