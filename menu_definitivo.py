@@ -123,10 +123,10 @@ while True:
                     elif num == 3:
                         hacer_visible('stock')
                     elif numero == 4:
-                        prod = input('Ingrese producto ')
+                        prod = input('Ingrese un producto para cambiarlo: ')
                         for i in cocina:
                             if i.nombre == prod:
-                                i.cambiar_informacion(input('Que desea cambiar '), input('>> '))
+                                i.cambiar_informacion(input('Que desea cambiar? '), input('>> '))
                     elif num == 5:
                         pagar()
                     elif num == 6:
