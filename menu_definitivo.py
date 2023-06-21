@@ -112,6 +112,7 @@ while True:
                     print('6) Salir')
 
 
+
                 try:
                     num = int(input('>> '))
 
@@ -123,7 +124,7 @@ while True:
                         hacer_visible('stock')
                     elif numero == 4:
                         prod = input('Ingrese producto ')
-                        for i in gondola:
+                        for i in cocina:
                             if i.nombre == prod:
                                 i.cambiar_informacion(input('Que desea cambiar '), input('>> '))
                     elif num == 5:
