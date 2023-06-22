@@ -3,91 +3,91 @@ print('\n\n-------Pickle Graba-------')
 import pickle
 archivo = open('clase archivos/pickles.pkl','wb')
 
-opcion =  {'Nombre': 'Pizza de Muzzarella', 'descripcion': 'Salsa de tomate y queso Muzarella', 'precio': 3200}
+opcion =  {'nombre': 'Pizza de Muzzarella', 'descripcion': 'Salsa de tomate y queso Muzarella', 'precio': 3200}
 pickle.dump(opcion, archivo)
 
-opcion = {'Nombre': 'Pizza de Jamon y Morrones', 'descripcion': 'Salsa de tomate, jamón y morrones', 'precio': 3500}
+opcion = {'nombre': 'Pizza de Jamon y Morrones', 'descripcion': 'Salsa de tomate, jamón y morrones', 'precio': 3500}
 pickle.dump(opcion, archivo)
 
-opcion = {'Nombre': 'Pizza de Fugazzeta', 'descripcion': 'Cebolla, Queso Muzzarella y Aceitunas', 'precio': 3500}
+opcion = {'nombre': 'Pizza de Fugazzeta', 'descripcion': 'Cebolla, Queso Muzzarella y Aceitunas', 'precio': 3500}
 pickle.dump(opcion, archivo)
 
-opcion =  {'Nombre': 'Pizza Napolitana', 'descripcion': 'Salsa de tomate, Queso Mozzarella, Rodajas de Tomates y Aceitunas', 'precio': 3200}
+opcion =  {'nombre': 'Pizza Napolitana', 'descripcion': 'Salsa de tomate, Queso Mozzarella, Rodajas de Tomates y Aceitunas', 'precio': 3200}
 pickle.dump(opcion, archivo)
 
-opcion =  {'Nombre': 'Empanada de Carne', 'descripcion': 'Relleno de Carne Picada, Cebolla y Aceitunas','precio': 300}
+opcion =  {'nombre': 'Empanada de Carne', 'descripcion': 'Relleno de Carne Picada, Cebolla y Aceitunas','precio': 300}
 pickle.dump(opcion, archivo)
 
-opcion =  {'Nombre': 'Empanada de Pollo', 'descripcion': 'Relleno de Pollo Desmenuzado, Cebolla y Queso Muzarella','precio': 300}
+opcion =  {'nombre': 'Empanada de Pollo', 'descripcion': 'Relleno de Pollo Desmenuzado, Cebolla y Queso Muzarella','precio': 300}
 pickle.dump(opcion, archivo)
 
-opcion = {'Nombre': 'Empanada de Jamon y Queso', 'descripcion': 'Relleno de Jamon Cocido y Queso Muzarella','precio': 300}
+opcion = {'nombre': 'Empanada de Jamon y Queso', 'descripcion': 'Relleno de Jamon Cocido y Queso Muzarella','precio': 300}
 pickle.dump(opcion, archivo)
 
-opcion = {'Nombre': 'Empanada de Verduras', 'descripcion': 'Relleno de Espinaca, Acelga y Brocoli con Queso','precio': 300}
+opcion = {'nombre': 'Empanada de Verduras', 'descripcion': 'Relleno de Espinaca, Acelga y Brocoli con Queso','precio': 300}
 pickle.dump(opcion, archivo)
 
-opcion = {'Nombre': 'Empanada de Humita', 'descripcion': 'Relleno de Choclo, Cebolla y Queso Muzarella', 'precio': 300}
+opcion = {'nombre': 'Empanada de Humita', 'descripcion': 'Relleno de Choclo, Cebolla y Queso Muzarella', 'precio': 300}
 pickle.dump(opcion, archivo)
 
-opcion = {'Nombre': 'Empanada de Queso y Cebolla', 'descripcion': 'Relleno de Cebolla Caramelizada y Queso Muzarella', 'precio': 300}
+opcion = {'nombre': 'Empanada de Queso y Cebolla', 'descripcion': 'Relleno de Cebolla Caramelizada y Queso Muzarella', 'precio': 300}
 pickle.dump(opcion, archivo)
 
-opcion = {'Nombre': 'Milanesa Simple', 'descripcion': 'Milanesa de Carne o Pollo', 'precio': 2200}
+opcion = {'nombre': 'Milanesa Simple', 'descripcion': 'Milanesa de Carne o Pollo', 'precio': 2200}
 pickle.dump(opcion, archivo)
 
-opcion = {'Nombre': 'Milanesa a la Napolitana', 'descripcion': 'Milanesa de carne o pollo con salsa de tomate y queso mozzarella.', 'precio': 2900}
+opcion = {'nombre': 'Milanesa a la Napolitana', 'descripcion': 'Milanesa de carne o pollo con salsa de tomate y queso mozzarella.', 'precio': 2900}
 pickle.dump(opcion, archivo)
 
-opcion = {'Nombre': 'Tallarines con salsa boloñesa', 'descripcion': 'Tallarines al dente servidos de salsa bolognesa. Con una salsa preparada con carne molida, tomates, cebolla y especias', 'precio': 1800}
+opcion = {'nombre': 'Tallarines con salsa boloñesa', 'descripcion': 'Tallarines al dente servidos de salsa bolognesa. Con una salsa preparada con carne molida, tomates, cebolla y especias', 'precio': 1800}
 pickle.dump(opcion, archivo)
 
-opcion = {'Nombre': 'Ñoquis de papa con salsa rosa', 'descripcion': 'Ñoquis caseros de papa acompañados de una salsa mezcla de tomate y salsa blanca.', 'precio': 1800}
+opcion = {'nombre': 'Ñoquis de papa con salsa rosa', 'descripcion': 'Ñoquis caseros de papa acompañados de una salsa mezcla de tomate y salsa blanca.', 'precio': 1800}
 pickle.dump(opcion, archivo)
 
-opcion = {'Nombre': 'Sorrentinos de jamón y queso con salsa cuatro quesos', 'descripcion': 'Sorrentinos rellenos de jamón y queso. La salsa es elaborada con una combinación de quesos como mozzarella, roquefort, parmesano y crema.', 'precio': 2500}
+opcion = {'nombre': 'Sorrentinos de jamón y queso con salsa cuatro quesos', 'descripcion': 'Sorrentinos rellenos de jamón y queso. La salsa es elaborada con una combinación de quesos como mozzarella, roquefort, parmesano y crema.', 'precio': 2500}
 pickle.dump(opcion, archivo)
 
-opcion = {'Nombre': 'Coca-Cola (lata)', 'precio': 600}
+opcion = {'nombre': 'Coca-Cola (lata)', 'precio': 600}
 pickle.dump(opcion, archivo)
 
-opcion = {'Nombre': 'Sprite (lata)', 'precio': 600}
+opcion = {'nombre': 'Sprite (lata)', 'precio': 600}
 pickle.dump(opcion, archivo)
 
-opcion = {'Nombre': 'Fanta (lata)', 'precio': 600}
+opcion = {'nombre': 'Fanta (lata)', 'precio': 600}
 pickle.dump(opcion, archivo)
 
-opcion = {'Nombre': 'Agua mineral sin gas 500ml','precio': 500}
+opcion = {'nombre': 'Agua mineral sin gas 500ml','precio': 500}
 pickle.dump(opcion, archivo)
 
-opcion = {'Nombre': 'Agua con gas 500ml', 'precio': 500}
+opcion = {'nombre': 'Agua con gas 500ml', 'precio': 500}
 pickle.dump(opcion, archivo)
 
-opcion = {'Nombre': 'Quilmes 476ml', 'precio': 350}
+opcion = {'nombre': 'Quilmes 476ml', 'precio': 350}
 pickle.dump(opcion, archivo)
 
-opcion = {'Nombre': 'Patagonia Amber Lager 473ml', 'precio': 550}
+opcion = {'nombre': 'Patagonia Amber Lager 473ml', 'precio': 550}
 pickle.dump(opcion, archivo)
 
-opcion = {'Nombre': 'Heineken 710ml', 'precio': 700}
+opcion = {'nombre': 'Heineken 710ml', 'precio': 700}
 pickle.dump(opcion, archivo)
 
-opcion = {'Nombre': 'Limonada', 'precio': 1000}
+opcion = {'nombre': 'Limonada', 'precio': 1000}
 pickle.dump(opcion, archivo)
 
-opcion = {'Nombre': 'Jugo de naranja natural', 'precio': 1000}
+opcion = {'nombre': 'Jugo de naranja natural', 'precio': 1000}
 pickle.dump(opcion, archivo)
 
-opcion = {'Nombre': 'Flan casero', 'descripcion': 'Flan casero acompañado con crema y dulce de leche', 'precio': 1100}
+opcion = {'nombre': 'Flan casero', 'descripcion': 'Flan casero acompañado con crema y dulce de leche', 'precio': 1100}
 pickle.dump(opcion, archivo)
 
-opcion = {'Nombre': 'Ensalada de fruta', 'descripcion': 'Ensalada de Frutilla, Manzana, Banana, Kiwi y Naranja', 'precio': 850}
+opcion = {'nombre': 'Ensalada de fruta', 'descripcion': 'Ensalada de Frutilla, Manzana, Banana, Kiwi y Naranja', 'precio': 850}
 pickle.dump(opcion, archivo)
 
-opcion = {'Nombre': 'Brownie con helado', 'descripcion': 'Brownie casero acompañado con una bocha de helado de dulce de leche o americana', 'precio': 1100}
+opcion = {'nombre': 'Brownie con helado', 'descripcion': 'Brownie casero acompañado con una bocha de helado de dulce de leche o americana', 'precio': 1100}
 pickle.dump(opcion, archivo)
 
-opcion = {'Nombre': 'Fruta a elección', 'descripcion': 'Elección de fruta entre Banana, Manzana, Pera, Kiwi y Durazno', 'precio': 200}
+opcion = {'nombre': 'Fruta a elección', 'descripcion': 'Elección de fruta entre Banana, Manzana, Pera, Kiwi y Durazno', 'precio': 200}
 pickle.dump(opcion, archivo)
 
 

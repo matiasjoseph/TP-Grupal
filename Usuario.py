@@ -12,7 +12,7 @@ class Persona:
     def serialize(self):
         return {
             'menu_code': self.menu_code,
-            'Nombre': self.Nombre,
+            'nombre': self.nombre,
             'descripcion': self.descripcion,
             'precio': self.precio
         }
@@ -20,7 +20,7 @@ class Persona:
     def serialize_details(self):
         return {
             'menu_code': self.menu_code,
-            'Nombre': self.Nombre,
+            'nombre': self.nombre,
             'descripcion': self.descripcion,
             'precio': self.precio
         }

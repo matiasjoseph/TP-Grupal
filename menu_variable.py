@@ -1,9 +1,9 @@
 class Comida:
-    def __init__(self, nombre, descripcion, precio, cantidad):
+    def __init__(self, nombre, descripcion, precio):
         self.precio = precio
         self.nombre = nombre
         self.descripcion = descripcion
-        self.cantidad = cantidad
+
 
     def generar_dic(self):
         return {'nombre': self.nombre, 'descripcion': self.descripcion, 'precio': self.precio}
@@ -18,15 +18,6 @@ class Comida:
     def informacion(self):
         return print(self)
 
-"""def agregar_a_carta(pro, cant, precio):
-    cant = int(cant)
-    for a in cocina:
-        if a.nombre == pro and a.cantidad > cant:
-            val = a.precio
-            item = Comida(pro, cant, val)
-            stock.append(item)
-            a.cantidad -= cant
-"""
 
 def agregar_a_carta(pro, cant, precio):
     cant = int(cant)
@@ -42,14 +33,6 @@ def eliminar_de_carta(comida):
         if i.nombre == comida:
             cocina.remove(i)
 
-
-def pagar():
-    total = 0
-    for i in stock:
-        total += i.cantidad * i.precio
-    print(f'Usted debe pagar {total} pesos')
-
-
 def hacer_visible(elemento):
     listita = []
     if elemento == 'cocina':
@@ -60,6 +43,15 @@ def hacer_visible(elemento):
         for prod in stock:
             listita.append(prod.generar_dic())
         print(listita)
+
+def pagar():
+    total = 0
+    for i in stock:
+        total += i.cantidad * i.precio
+    input('\nEn que medio quiere pagar? (Efectivo, Tarjeta de crédito/débito, Transferencia bancaria y PayPal): ')
+    print(f'Usted debe pagar {total} pesos')
+
+
 
 def salir():
     print('Gracias por utilizar nuestro servicios')
@@ -72,13 +64,15 @@ while Flag:
     stock = []
     print('\nBienvenido a la Rotiseria')
     try:
-            while Flag:
-                print('\nQue accion desea realizar')
-                print('1) Revisar stock')
-                print('2) Agregar a la carta')
-                print('3) Eliminar de la carta')
-                print('4) Cambiar dato de comida')
-                print('5) Salir')
+
+        while Flag:
+                print('\nQue accion desea realizar?')
+                print('1) Revisar Pedido')
+                print('2) Agregar Cosas al Pedido')
+                print('3) Eliminar Cosas del Pedido')
+                print('4) Cambiar dato del Pedido')
+                print('5) Pagar')
+                print('6) Salir')
 
                 try:
                     num = int(input('>> '))
@@ -86,7 +80,7 @@ while Flag:
                     if num == 1:
                         hacer_visible('cocina')
                     elif num == 2:
-                        agregar_a_carta(input('Nombre del plato: '), input('Cantidad: '), input('Precio: '))
+                        agregar_a_carta(input('Nombre del plato: '), int(input('Cantidad: ')), int(input('Precio: ')))
                     elif num == 3:
                         eliminar_de_carta(input('Que plato desea eliminar?: '))
                     elif num == 4:
@@ -95,6 +89,9 @@ while Flag:
                             if i.nombre == prod:
                                 i.cambiar_informacion(input('Que desea cambiar?: '), input('>> '))
                     elif num == 5:
+                        pagar()
+
+                    elif num == 6:
                         salir()
                         Flag = False
                     else:
@@ -104,4 +101,4 @@ while Flag:
 
 
     except:
-        print("\nDebe ingresar numeros, no letras")
+            print("\nDebe ingresar numeros, no letras")

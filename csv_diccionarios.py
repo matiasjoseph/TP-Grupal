@@ -9,12 +9,12 @@ comidas = [
 ]
 
 with open('clase archivos/comidas_dicc.csv','w', newline='\n') as archivo:
-    campos = ['Nombre', 'descripcion', 'precio']
+    campos = ['nombre', 'descripcion', 'precio']
     writer = csv.DictWriter(archivo, fieldnames=campos)
     writer.writeheader()
-    for Nombre, descripcion, precio in comidas:
+    for nombre, descripcion, precio in comidas:
         writer.writerow({
-            'Nombre':Nombre,
+            'nombre':nombre,
             'descripcion': descripcion,
             'precio': precio
         })
@@ -29,6 +29,6 @@ import csv
 with open('clase archivos/comidas_dicc.csv','r', newline='\n') as archivo:
     reader = csv.DictReader(archivo)
     for cliente in reader:
-        print(cliente['Nombre'],
+        print(cliente['nombre'],
               cliente['descripcion'],
               cliente['precio'])

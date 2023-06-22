@@ -2,17 +2,17 @@ import pandas as pd
 
 comidas = [
     {
-        'Nombre': 'Pizza de Muzzarella',
+        'nombre': 'Pizza de Muzzarella',
         'descripcion': 'Salsa de tomate y queso Muzarella',
         'precio': 3200
     },
     {
-        'Nombre': 'Pizza de Jamon y Morrones',
+        'nombre': 'Pizza de Jamon y Morrones',
         'descripcion': 'Salsa de tomate, jamón y morrones',
         'precio': 3500
     },
     {
-        'Nombre': 'Pizza de Fugazzeta',
+        'nombre': 'Pizza de Fugazzeta',
         'descripcion': 'Cebolla, Queso Muzzarella y Aceitunas',
         'precio': 3500
     },
