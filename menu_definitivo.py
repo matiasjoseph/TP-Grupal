@@ -35,7 +35,7 @@ class Comida:
 # Funciones
 
 
-def agregar_a_carta(pro, cant):
+def agregar_a_carta(pro, cant, precio):
     cant = int(cant)
     for a in cocina:
         if a.nombre == pro and a.cantidad > cant:
@@ -115,29 +115,29 @@ while Flag:
 
 
 
-                try:
-                    num = int(input('>> '))
+                    try:
+                        num = int(input('>> '))
 
-                    if num == 1:
-                        hacer_visible('cocina')
-                    elif num == 2:
-                        agregar_a_carta(input('Nombre del Plato: '), input('Cantidad: '))
-                    elif num == 3:
-                        hacer_visible('stock')
-                    elif numero == 4:
-                        prod = input('Ingrese un producto para cambiarlo: ')
-                        for i in cocina:
-                            if i.nombre == prod:
-                                i.cambiar_informacion(input('Que desea cambiar? '), input('>> '))
-                    elif num == 5:
-                        pagar()
-                    elif num == 6:
-                        salir()
-                        Flag = False
-                    else:
-                        break
-                except Exception as e:
-                    print('Debe ingresar numeros, no letras', e)
+                        if num == 1:
+                            hacer_visible('cocina')
+                        elif num == 2:
+                            agregar_a_carta(input('Nombre del Plato: '), input('Cantidad: '), input('Precio: '))
+                        elif num == 3:
+                            eliminar_de_carta(input('Que plato desea eliminar?: '))
+                        elif num == 4:
+                            prod = input('Ingrese un producto para cambiarlo: ')
+                            for i in cocina:
+                                if i.nombre == prod:
+                                    i.cambiar_informacion(input('Que desea cambiar? '), input('>> '))
+                        elif num == 5:
+                            pagar()
+                        elif num == 6:
+                            salir()
+                            Flag = False
+                        else:
+                            break
+                    except Exception as e:
+                        print('Debe ingresar numeros, no letras', e)
             else:
                 print('Usuario o clave no validos. Ingrese de nuevo')
 
